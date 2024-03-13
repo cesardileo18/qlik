@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Responsive</title>
+    <style>
+        /* Estilos para hacer la imagen responsive */
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        // Función para cambiar la imagen
+        function changeImage() {
+            var img = document.getElementById('dynamicImg');
+            // Cambia el src de la imagen dependiendo del actual
+            if (img.src.includes('test.png')) {
+                img.src = './img/test2.png'; // Asegúrate de que la ruta sea accesible
+            } else {
+                img.src = './img/test.png'; // Asegúrate de que la ruta sea accesible
+            }
+        }
+
+        window.onload = function () {2
+            setInterval(changeImage, 6000);
+        };
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <img id="dynamicImg" src="./img/test.png" alt="Descripción de la imagen" class="responsive-img">
+    </div>
+
+</body>
+
+</html>
