@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./img/css/index.css">
     <title>Imagen Responsive</title>
-    <style>
-        /* Estilos para hacer la imagen responsive */
-        .responsive-img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+</head>
+<body>
+    <div>
+        <img id="dynamicImg" src="./img/test.png" alt="Descripción de la imagen" class="responsive-img">
+    </div>
     <script>
         // Función para cambiar la imagen
         function changeImage() {
@@ -24,18 +22,11 @@
             }
         }
 
-        window.onload = function () {2
+        window.onload = function () {
+            2
             setInterval(changeImage, 6000);
         };
     </script>
-</head>
-
-<body>
-
-    <div>
-        <img id="dynamicImg" src="./img/test.png" alt="Descripción de la imagen" class="responsive-img">
-    </div>
-
 </body>
 
 </html>
